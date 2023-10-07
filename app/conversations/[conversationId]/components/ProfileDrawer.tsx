@@ -31,8 +31,8 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
     const isActive = members.indexOf(otherUser.email!) !== -1
 
     const joinedDate = useMemo(() => {
-        return format(new Date(otherUser.createAt), 'PP')
-    }, [otherUser.createAt])
+        return format(new Date(otherUser.createdAt), 'PP')
+    }, [otherUser.createdAt])
 
     const title = useMemo(() => {
         return data.name || otherUser.name
